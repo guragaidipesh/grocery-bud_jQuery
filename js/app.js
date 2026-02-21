@@ -1,4 +1,14 @@
-var items = groceryItems;
+function getLocalStorage() {
+  var list = localStorage.getItem("grocery-list");
+  if (list) {
+    return JSON.parse(list);
+  }
+  return [];
+}
+function setLocalStorage(itemsArray) {
+  localStorage.setItem("grocery-list", JSON.stringify(itemsArray));
+}
+var items = getLocalStorage();
 
 function render() {
   var $app = $("#app");
@@ -15,6 +25,7 @@ function editCompleted(itemId) {
     }
     return item;
   });
+  setLocalStorage(items);
   render();
 }
 $(document).ready(function () {
@@ -25,6 +36,8 @@ function removeItem(itemId) {
   items = $.grep(items, function (item) {
     return item.id !== itemId;
   });
+  setLocalStorage(items);
+
   render();
   setTimeout(function () {
     alert("Item Deleted Successfully!");
@@ -53,6 +66,7 @@ function addItem(itemName) {
     id: generateId(),
   };
   items.push(newItem);
+  setLocalStorage(items);
   render();
   setTimeout(function () {
     alert("Item Added Successfully!");
@@ -89,6 +103,7 @@ function updateItemName(newName) {
     return item;
   });
   editId = null;
+  setLocalStorage(items);
   render();
   setTimeout(function () {
     alert("Item Updated Successfully!");
