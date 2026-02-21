@@ -16,3 +16,13 @@ function createSingleItem(item) {
 
   return $div;
 }
+function createSingleItem(item) {
+  // ....
+
+  // Add event listener for checkbox
+  $div.find('input[type="checkbox"]').on("change", function () {
+    editCompleted(item.id);
+  });
+
+  return $div;
+}
