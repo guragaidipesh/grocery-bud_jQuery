@@ -1,3 +1,5 @@
-#grocery-list {
-  list-style: none;
+.items {
+  margin-top: 2rem;
+  display: grid;
+  row-gap: 1rem;
 }

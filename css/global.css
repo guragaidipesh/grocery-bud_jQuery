@@ -3,17 +3,23 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial;
 }
 body {
-  background: #574e4e;
+  background: #eee;
+  font-family: Helvetica, sans-serif;
   display: flex;
   justify-content: center;
   padding: 40px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #222;
 }
-.container {
-  background: #605e5e;
-  padding: 20px;
-  width: 400px;
-  border-radius: 8px;
+.section-center {
+  margin: 0 auto;
+  margin-top: 8rem;
+  max-width: 30rem;
+  background: #bab1b1;
+  border-radius: 0.25rem;
+  padding: 2rem;
+  position: relative;
 }
