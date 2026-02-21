@@ -18,6 +18,9 @@ function createSingleItem(item) {
   $div.find(".remove-btn").on("click", function () {
     removeItem(item.id);
   });
+  $div.find(".edit-btn").on("click", function () {
+    setEditId(item.id);
+  });
 
   return $div;
 }
