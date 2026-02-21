@@ -7,7 +7,7 @@ form h2 {
 
 .form-control {
   display: grid;
-  grid-template-columns: 1fr 100px;
+  grid-template-columns: auto 1fr;
 }
 
 .form-input {
@@ -27,12 +27,13 @@ form h2 {
   cursor: pointer;
   color: #fff;
   background: #06b6d4;
-  border: transparent;
+  border: #06b6d4;
   border-radius: 0;
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
   padding: 0.375rem 0.75rem;
   text-transform: capitalize;
+  border: 1px solid #06b6d4;
 }
 
 .form-control .btn:hover {
