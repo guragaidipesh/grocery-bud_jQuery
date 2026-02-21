@@ -4,18 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grocery Bud</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/items.css" />
+    <link rel="stylesheet" href="css/single-item.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Grocery Bud</h1>
+    <section class="section-center">
+      <div id="app">
+        <div class="items">
+          <div class="single-item">
+            <input type="checkbox" checked />
+            <p style="text-decoration: line-through">milk</p>
+            <button class="btn icon-btn edit-btn" type="button">
+              <i class="fa-regular fa-pen-to-square"></i>
+            </button>
+            <button class="btn icon-btn remove-btn" type="button">
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
+          </div>
+          <div class="single-item">
+            <input type="checkbox" checked />
+            <p style="text-decoration: line-through">bread</p>
+            <button class="btn icon-btn edit-btn" type="button">
+              <i class="fa-regular fa-pen-to-square"></i>
+            </button>
+            <button class="btn icon-btn remove-btn" type="button">
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
+          </div>
+          <div class="single-item">
+            <input type="checkbox" />
+            <p style="text-decoration: none">eggs</p>
+            <button class="btn icon-btn edit-btn" type="button">
+              <i class="fa-regular fa-pen-to-square"></i>
+            </button>
+            <button class="btn icon-btn remove-btn" type="button">
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
+          </div>
+          <div class="single-item">
+            <input type="checkbox" />
+            <p style="text-decoration: none">butter</p>
+            <button class="btn icon-btn edit-btn" type="button">
+              <i class="fa-regular fa-pen-to-square"></i>
+            </button>
+            <button class="btn icon-btn remove-btn" type="button">
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <form id="grocery-form">
-        <input type="text" id="grocery-input" placeholder="e.g. milk" />
-        <button type="submit">Add</button>
-      </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/single-item.js"></script>
+    <script src="js/items.js"></script>
+    <script src="js/form.js"></script>
 
-      <ul id="grocery-list"></ul>
-      <button id="clear-btn">Clear All</button>
-    </div>
+    <script src="js/app.js"></script>
   </body>
 </html>
