@@ -8,9 +8,6 @@ function render() {
   $app.append($itemsElement);
 }
 
-// ....
-
-// Edit Completed Function
 function editCompleted(itemId) {
   items = $.map(items, function (item) {
     if (item.id === itemId) {
@@ -23,3 +20,13 @@ function editCompleted(itemId) {
 $(document).ready(function () {
   render();
 });
+
+function removeItem(itemId) {
+  items = $.grep(items, function (item) {
+    return item.id !== itemId;
+  });
+  render();
+  setTimeout(function () {
+    alert("Item Deleted Successfully!");
+  }, 0);
+}
